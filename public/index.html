@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Civil Matters</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.15.5/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.15.5/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.15.5/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.15.5/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.15.5/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+
+    <link rel="stylesheet" href="style/startup-materialize.min.css">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar dark absolute">
+      <div class="nav-wrapper">
+        <a href="index.html" class="brand-logo"><i class="icon-diamond white-text"></i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li class="active"><a class="dropdown-button" href="#!" data-activates="pages" data-constrainWidth="false" data-belowOrigin="true">Pages<i class="material-icons right">arrow_drop_down</i></a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="docs/about.html">Docs</a></li>
+          <li><a href="#">Buy Now!</a></li>
+        </ul>
+
+        <ul id="pages" class="dropdown-content">
+          <li><a class="active" href="index.html">Horizontal Halves</a></li>
+          <li><a href="sierra.html">Zoom Out</a></li>
+          <li><a href="circle-reveal.html">Circle Reveal</a></li>
+          <li><a href="phone-wall.html">Phone Wall</a></li>
+          <li><a href="element-transitions.html">Element Transitions</a></li>
+          <li><a href="basic-elements.html">Basic Elements</a></li>
+          <li><a href="card-shuffle.html">Shuffle</a></li>
+          <li><a href="postcards.html">Postcards</a></li>
+        </ul>
+
+        <a href="#" data-activates="slide-out" class="button-collapse right"><i class="material-icons white-text">menu</i></a>
+      </div>
+    </nav>
+    <ul id="slide-out" class="side-nav">
+      <li class="no-padding">
+        <ul class="collapsible collapsible-accordion">
+          <li class="bold">
+            <a class="collapsible-header waves-effect waves-teal active">Pages</a>
+            <div class="collapsible-body">
+              <ul>
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="sierra.html">Zoom Out</a></li>
+                <li><a href="circle-reveal.html">Circle Reveal</a></li>
+                <li><a href="phone-wall.html">Phone Wall</a></li>
+                <li><a href="element-transitions.html">Element Transitions</a></li>
+                <li><a href="basic-elements.html">Basic Elements</a></li>
+                <li><a href="card-shuffle.html">Shuffle</a></li>
+                <li><a href="postcards.html">Postcards</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </li>
+      <li><a class="waves-effect waves-teal" href="blog.html">Blog</a></li>
+      <li><a class="waves-effect waves-teal" href="team.html">Team</a></li>
+      <li><a class="waves-effect waves-teal" href="docs/about.html">Docs</a></li>
+      <li><a class="waves-effect waves-teal" href="#">Buy Now!</a></li>
+    </ul>
+
+    <div class="header full-height horizontal-half-transition">
+      <div class="background">
+        <img src="./images/silver-macbook-beside-black-sony-ps4-dualshock-4-silver-682933.jpg" alt="">
+      </div>
+      <div class="phone-preview-sizer">
+        <div class="phone-preview"></div>
+        <div class="image-container active" style="background-image:url(http://placehold.it/530x1000)"></div>
+        <div class="image-container" style="background-image:url(http://placehold.it/530x900)"></div>
+        <div class="image-container" style="background-image:url(http://placehold.it/530x800)"></div>
+      </div>
+      <div class="horizontal-half-wrapper right-side active">
+        <div class="header-background white"></div>
+        <div class="header-wrapper row valign-wrapper">
+          <div class="col s12 m8 offset-m2 valign">
+            <h1>Civil Matters</h1>
+            <span class="tagline">TagLine Goes Here</span>
+            <button class="read-more"><i class="icon-caret-down"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="horizontal-half-wrapper">
+        <div class="header-background white"></div>
+        <div class="header-wrapper row valign-wrapper">
+          <div class="col s12 m8 offset-m2 valign">
+            <h1>Play Demo</h1>
+            <span class="tagline">Info on how to play game</span>
+            <button class="read-more"><i class="icon-caret-down"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="horizontal-half-wrapper right-side">
+        <div class="header-background white"></div>
+        <div class="header-wrapper row valign-wrapper">
+          <div class="col s12 m8 offset-m2 valign">
+            <h1></h1>
+            <span class="tagline">Third tagline with more information.</span>
+            <button class="read-more"><i class="icon-caret-down"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section valign-wrapper">
+      <div class="row valign">
+        <div class="col s12 m10 offset-m1">
+          <div class="row">
+            <div class="col s12"><h2 class="section-title">Game Features</h2></div>
+            <div class="col s12 m6 l4">
+              <h4><i class="icon-light-bulb"></i></h4>
+              <p class="caption">This is a cool feature about your product! It really separates you from the crowd.</p>
+            </div>
+            <div class="col s12 m6 l4">
+              <h4><i class="icon-bolt"></i></h4>
+              <p class="caption">This is a cool feature about your product! It really separates you from the crowd.</p>
+            </div>
+            <div class="col s12 m6 l4">
+              <h4><i class="icon-rocket"></i></h4>
+              <p class="caption">This is a cool feature about your product! It really separates you from the crowd.</p>
+            </div>
+            <div class="col s12 m6 l4">
+              <h4><i class="icon-settings"></i></h4>
+              <p class="caption">This is a cool feature about your product! It really separates you from the crowd.</p>
+            </div>
+            <div class="col s12 m6 l4">
+              <h4><i class="icon-umbrella"></i></h4>
+              <p class="caption">This is a cool feature about your product! It really separates you from the crowd.</p>
+            </div>
+            <div class="col s12 m6 l4">
+              <h4><i class="icon-compass"></i></h4>
+              <p class="caption">This is a cool feature about your product! It really separates you from the crowd.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Pricing Tables -->
+    <div class="section valign-wrapper">
+      <div class="row valign">
+        <div class="col s12 m10 offset-m1">
+          <div class="row">
+            <div class="col s12 m4">
+              <div class="pricing-table">
+                <div class="pricing-header">
+                  <i class="icon-paper-plane"></i>
+                  <h4>Basic</h4>
+                  <div class="price">
+                    <span class="currency">$</span>
+                    <span class="dollars">9</span>
+                    <span class="cents">99</span>
+                  </div>
+                </div>
+                <ul class="pricing-features">
+                  <li class="pricing-feature"><i class="icon-close"></i>Game Demo And Level One</li>
+                  <li class="pricing-feature disabled"><i class="icon-accept"></i>BTS with Developers</li>
+                  <li class="pricing-feature disabled"><i class="icon-close"></i>Original Twine Story</li>
+                  <li class="pricing-feature disabled"><i class="icon-close"></i>Updates on future level development</li>
+                  <li class="pricing-feature disabled"><i class="icon-close"></i>Early Access to team news</li>
+                  <li class="pricing-feature disabled"><i class="icon-close"></i>Support Credits on Teams Next Game</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col s12 m4">
+              <div class="pricing-table featured">
+                <div class="pricing-header">
+                  <i class="icon-plane"></i>
+                  <h4>Team Pack</h4>
+                  <div class="price">
+                    <span class="currency">$</span>
+                    <span class="dollars">24</span>
+                    <span class="cents">99</span>
+                  </div>
+                </div>
+                <ul class="pricing-features">
+                  <li class="pricing-feature"><i class="icon-accept"></i>BTS with Developers</li>
+                  <li class="pricing-feature"><i class="icon-accept"></i>Game Demo And Level One</li>
+                  <li class="pricing-feature"><i class="icon-accept"></i>Original Twine Story</li>
+                  <li class="pricing-feature disabled"><i class="icon-close"></i>Updates on future level development</li>
+                  <li class="pricing-feature disabled"><i class="icon-close"></i>Early Access to team news</li>
+                  <li class="pricing-feature disabled"><i class="icon-close"></i>Support Credits on Teams Next Game</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col s12 m4">
+              <div class="pricing-table">
+                <div class="pricing-header">
+                  <i class="icon-rocket"></i>
+                  <h4>Supporter</h4>
+                  <div class="price">
+                    <span class="currency">$</span>
+                    <span class="dollars">49</span>
+                    <span class="cents">99</span>
+                  </div>
+                </div>
+                <ul class="pricing-features">
+                  <li class="pricing-feature"><i class="icon-accept"></i>BTS with Developers</li>
+                  <li class="pricing-feature"><i class="icon-accept"></i>Game Demo And Level One</li>
+                  <li class="pricing-feature"><i class="icon-accept"></i>Original Twine Story</li>
+                  <li class="pricing-feature"><i class="icon-accept"></i>Updates on future level development</li>
+                  <li class="pricing-feature"><i class="icon-accept"></i>Early Access to team news</li>
+                  <li class="pricing-feature"><i class="icon-accept"></i>Support Credits on Teams Next Game</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section light full-height">
+      <div class="row">
+        <div class="col s12 m10 offset-m1 center">
+          <h1>Blog Feed</h1>
+          <div class="row masonry-grid">
+            <div class="col s12 m6 l4">
+              <div class="card">
+                <div class="card-image">
+                  <a href="https://medium.com/@civilmattersoakland/test-post-1-2ad39e19b393?source=friends_link&sk=cb53ecc0a1e3c037e2290006dce7bc51"><img src="./images/RetroTest1.png"></a>
+                  <span class="card-title">Something Interesting</span>
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m6 l4">
+              <div class="card">
+                <div class="card-image">
+                  <a href="https://medium.com/@civilmattersoakland/test-post-1-2ad39e19b393?source=friends_link&sk=cb53ecc0a1e3c037e2290006dce7bc51"><img src="./images/RetroTest2.png"></a>
+                  <span class="card-title">Another Blog Post</span>
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m6 l4">
+              <div class="card">
+                <div class="card-image">
+                  <a href="https://medium.com/@civilmattersoakland/test-post-1-2ad39e19b393?source=friends_link&sk=cb53ecc0a1e3c037e2290006dce7bc51"><img src="./images/RetroTest3.png"></a>
+                  <span class="card-title">Click Bait Article</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col s6 m3">
+            <img class="materialize-logo" src="images/materialize-teal.png" alt="">
+            <p>Made with love by Materialize.</p>
+          </div>
+          <div class="col s6 m3">
+            <h5>About</h5>
+            <ul>
+              <li><a href="#!">Blog</a></li>
+              <li><a href="#!">Pricing</a></li>
+              <li><a href="#!">Docs</a></li>
+            </ul>
+          </div>
+          <div class="col s6 m3">
+            <h5>Connect</h5>
+            <ul>
+              <li><a href="#!">Community</a></li>
+              <li><a href="#!">Subscribe</a></li>
+              <li><a href="#!">Email</a></li>
+            </ul>
+          </div>
+          <div class="col s6 m3">
+            <h5>Contact</h5>
+            <ul>
+              <li><a href="#!">Twitter</a></li>
+              <li><a href="#!">Facebook</a></li>
+              <li><a href="#!">Github</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+        try {
+          let app = firebase.app();
+          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
+          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+
+    <!-- External libraries -->
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/ScrollMagic.min.js"></script>
+    <script src="js/animation.gsap.min.js"></script>
+
+    <!-- Initialization script -->
+    <script src="js/startup.js"></script>
+    <script src="js/init.js"></script>
+  </body>
+</html>

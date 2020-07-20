@@ -11632,7 +11632,8 @@ nav.navbar ul a:hover {
 
 /**** HEADER ****/
 .header {
-  color: #1de9c3;
+  /* main-color */
+  color: #f15831;
 }
 
 .header .header-wrapper {
